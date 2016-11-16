@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Music Player</title>
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link type="text/css" rel="stylesheet" href="music_player.css">
+    </head>
+    <body>
+        <div class="row">
+            <!-- Player -->
+            <div id="player" class="col s10 m8 offset-m1">
+                <!-- Music Library -->
+                <div id="playlist" class="col s12 flow-text">
+                    <p class="drop center white-text">
+                        Drop music files here&nbsp;<a class="btn-small transparent white-text tooltipped" href="#info-modal" data-position="right" data-delay=0 data-tooltip="Help"><i class="fa fa-question-circle"></i></a>
+                    </p>
+                </div>
+                <!-- Controls -->
+                <div id="controls" class="col s12">
+                    <i id="shuffle" class="col s2 fa fa-random fa-3x"></i>
+                    <i id="previous" class="col s2 fa fa-fast-backward fa-3x"></i>
+                    <i id="play-pause" class="col s2 fa fa-play fa-3x"></i>
+                    <i id="next" class="col s2 fa fa-fast-forward fa-3x"></i>
+                    <i id="mute" class="col s2 fa fa-volume-off fa-3x"></i>
+                    <i id="full-volume" class="col s2 fa fa-volume-up fa-3x"></i>
+                </div>
+                <!-- Seek Bar -->
+                <div id="seek-bar" class="col s12">
+                    <div id="seek-bar-bg"></div>
+                </div>
+                <div id="timer" class="white-text flow-text col offset-s12" >00:00:00</div>
+            </div>
+            <!-- Info Modal -->
+            <div id="info-modal" class="modal">
+                <div class="modal-content">
+                    <h4>Controls</h4>
+                    <p class="blue-text">Start by dropping music files after closing this modal.</p>
+                    <p class="blue-text">You can play a song by double-clicking it, or using the controls.</p>
+                    <ul style="list-style: none;">
+                        <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="black-text fa fa-arrow-up"></i>&nbsp;Increase Volume</li><br>
+                        <li><i class="black-text fa fa-arrow-left"></i>&nbsp;Rewind&emsp;&emsp;&emsp;&nbsp;
+                            <i class="black-text fa fa-arrow-down"></i>&nbsp;Decrease Volume&emsp;&emsp;&emsp;&nbsp;
+                            <i class="black-text fa fa-arrow-right"></i>&nbsp;Forward
+                        </li>
+                        <br><br>
+                        <li><b>&lt;Space Bar&gt;</b>&emsp;&emsp;&nbsp;Play / Pause</li>
+                    </ul>
+                    <p class="purple-text"><b>Note: </b>Seek Bar and Volume Bar are clickable.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK&nbsp;<i class="black-text fa fa-check fa-2x"></i></a>
+                </div>
+            </div>
+            
+            <!-- Volume -->
+            <div id="volume-controls" class="col">
+                <i class="fa fa-plus"></i>
+                <div id="volume-bar" class="col s4">
+                    <div id="volume-bar-bg"></div>
+                    <div id="volume-empty"></div>
+                </div>
+                <i class="fa fa-minus"></i>
+            </div>
+        </div>
+        <div id="gh-star" class="row">
+            <a class="github-button" target="_blank" href="https://github.com/pratulyab/MusicPlayer" data-icon="octicon-star" data-style="mega" aria-label="Star pratulyab/MusicPlayer on GitHub">Star on GitHub</a>
+        </div>
+        <!-- Loading javascript -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script type="text/javascript" src="music_player.js"></script>
+        <script>
+            $('document').ready(function(){
+               MusicPlayer.init(); 
+            });
+        </script>
+        <!-- Github Star-->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </body>
+</html>

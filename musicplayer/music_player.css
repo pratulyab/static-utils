@@ -1,0 +1,165 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #0B1D29 ;
+    height: 100vh;
+    width: 100%;
+}
+
+body > div:first-child {
+    margin-top: 3%;
+}
+
+#player{
+     height: 400px;
+}
+
+#playlist {
+    height: inherit;
+    border: 2px dashed;
+    border-bottom-color: limegreen;
+    border-right-color: sandybrown;
+    border-top-color: deepskyblue;
+    border-left-color: hotpink;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: hotpink;
+}
+
+.fa-info:hover {
+    cursor: pointer;
+}
+
+#playlist > p.drop {
+    line-height: 350px;
+}
+
+#playlist > ul.list {
+    color: white;
+    list-style: none;
+}
+
+#playlist > ul.list:hover {
+    cursor: pointer;
+}
+
+#playlist li.playing {
+    color: lightcoral;
+    font-weight: 500;
+}
+
+#controls {
+    margin-top: 3%;
+    border: 2px dotted #fff;
+}
+
+i.fa {
+    color: white;
+}
+
+#controls > i.fa {
+    text-align: center;
+}
+
+#controls > i:hover {
+    cursor: pointer;
+}
+
+#controls > i.selected {
+    color: rgb(120, 151,177);
+}
+
+.over {
+    background-color: rgb(80, 106, 139);
+}
+
+#library > div {
+    margin-left: 50px;
+    width: auto;
+    color: white;
+    font-family: serif;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+#seek-bar {
+    position: relative;
+    height: 15px;
+    margin-top: 3%;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+#seek-bar:hover {
+    cursor: pointer;
+}
+
+#seek-bar-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(120, 151, 177);
+    border-radius: 30px;
+    width: 0%;
+    height: 100%;
+}
+
+#volume-bar{
+    position: relative;
+    height: 400px;
+    width: 2%;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+#volume-bar:hover {
+    cursor: pointer;
+}
+
+#volume-bar > div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+#volume-empty {
+    height: 0% !important;
+    background-color: #0B1D29;
+}
+
+#volume-bar-bg {
+    background-color: rgb(120, 151, 177);
+}
+
+#timer {
+    margin-top: -3%;
+}
+
+#library .playing {
+    color: hotpink;
+    font-weight: bold;
+}
+
+#volume-controls > i.fa{
+    text-align: center;
+}
+
+#volume-controls {
+    display: flex;
+    flex-direction: column;
+}
+
+#gh-star {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+}
